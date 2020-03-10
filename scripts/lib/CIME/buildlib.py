@@ -57,7 +57,7 @@ def build_cime_component_lib(case, compname, libroot, bldroot):
         elif compname.startswith('x'):
             out.write(os.path.join(cimeroot, "src", "components", "xcpl_comps_"+comp_interface, "xshare") + "\n")
             out.write(os.path.join(cimeroot, "src", "components", "xcpl_comps_"+comp_interface, compname, "src") + "\n")
-        elif compname.startswith('s'):
+        elif compname.startswith('s') and comp_interface == 'mct':
             out.write(os.path.join(cimeroot, "src", "components", "stub_comps_"+comp_interface, compname, "src") + "\n")
 
     # Build the component

@@ -20,6 +20,13 @@ def _build_usernl_files(case, model, comp):
     Create user_nl_xxx files, expects cwd is caseroot
     """
     model = model.upper()
+    compname = case.get_value("COMP_{}".format(model))
+    is_stubcomp = False
+    if compname is not None and compname.startswith('s'):
+        is_stubcomp = True
+    if is_stubcomp:
+        return
+
     if model == "DRV":
         model_file = case.get_value("CONFIG_CPL_FILE")
     else:
@@ -199,6 +206,8 @@ def _case_setup_impl(case, caseroot, clean=False, test_mode=False, reset=False):
         # loop over models
         for model in models:
             comp = case.get_value("COMP_{}".format(model))
+            if comp is None:
+                continue
             logger.debug("Building {} usernl files".format(model))
             _build_usernl_files(case, model, comp)
             if comp == "cism":

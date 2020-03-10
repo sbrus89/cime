@@ -78,7 +78,10 @@ def create_namelists(self, component=None):
             compname = "drv"
         else:
             compname = self.get_value("COMP_{}".format(model_str.upper()))
-        if component is None or component == model_str or compname=="ufsatm":
+        is_stubcomp = False
+        if compname.startswith('s'):
+            is_stubcomp = True
+        if compname and (component is None or component == model_str or compname=="ufsatm") and not is_stubcomp:
             # first look in the case SourceMods directory
             cmd = os.path.join(caseroot, "SourceMods", "src."+compname, "buildnml")
             if os.path.isfile(cmd):
