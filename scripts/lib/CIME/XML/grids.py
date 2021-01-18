@@ -16,8 +16,7 @@ class Grids(GenericXML):
             files = Files()
         if infile is None:
             infile = files.get_value("GRIDS_SPEC_FILE", {"comp_interface":driver})
-        print "DEBUG: infile is ",infile
-        logger.debug(" Grid specification file is {}".format(infile))
+        logger.info("Grid specification file is {}".format(infile))
         schema = files.get_schema("GRIDS_SPEC_FILE")
         try:
             GenericXML.__init__(self, infile, schema)
