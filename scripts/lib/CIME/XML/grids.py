@@ -11,11 +11,12 @@ logger = logging.getLogger(__name__)
 
 class Grids(GenericXML):
 
-    def __init__(self, infile=None, files=None):
+    def __init__(self, infile=None, files=None, driver=None):
         if files is None:
             files = Files()
         if infile is None:
-            infile = files.get_value("GRIDS_SPEC_FILE")
+            infile = files.get_value("GRIDS_SPEC_FILE", {"comp_interface":driver})
+        print "DEBUG: infile is ",infile
         logger.debug(" Grid specification file is {}".format(infile))
         schema = files.get_schema("GRIDS_SPEC_FILE")
         try:
