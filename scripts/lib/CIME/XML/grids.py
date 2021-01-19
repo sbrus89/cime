@@ -15,7 +15,10 @@ class Grids(GenericXML):
         if files is None:
             files = Files()
         if infile is None:
-            infile = files.get_value("GRIDS_SPEC_FILE", {"comp_interface":driver})
+            if driver is not None:
+                infile = files.get_value("GRIDS_SPEC_FILE", {"comp_interface":driver})
+            else:
+                infile = files.get_value("GRIDS_SPEC_FILE")
         logger.info("Grid specification file is {}".format(infile))
         schema = files.get_schema("GRIDS_SPEC_FILE")
         try:
@@ -272,19 +275,14 @@ class Grids(GenericXML):
                 if not comp_name == "MASK":
                     mesh_nodes = self.get_children("mesh", root=domain_node)
                     for mesh_node in mesh_nodes:
-                        driver_attrib = self.get(mesh_node, "driver")
-                        if driver == driver_attrib:
-                            domains[mesh_name] = self.text(mesh_node)
+                        domains[mesh_name] = self.text(mesh_node)
 
         if driver == "nuopc":
             mask_domain_node = self.get_optional_child("domain", attributes={"name":domains["MASK_GRID"]},
                                                        root=self.get_child("domains"))
             mesh_nodes = self.get_children("mesh", root=mask_domain_node)
             for mesh_node in mesh_nodes:
-                driver_attrib = self.get(mesh_node, "driver")
-                if driver == driver_attrib:
-                    domains["MASK_MESH"] = self.text(mesh_node)
-
+                domains["MASK_MESH"] = self.text(mesh_node)
 
         return domains
 

@@ -731,8 +731,8 @@
       <grid name="ocnice">ne0np4.ARCTICGRIS.ne30x8</grid>
       <mask>tx0.1v2</mask>
     </model_grid>
-    <!-- MPAS-A grids -->
 
+    <!-- MPAS-A grids -->
     <model_grid alias="mpasa480_mpasa480" not_compset="_POP">
       <grid name="atm">mpasa480</grid>
       <grid name="lnd">mpasa480</grid>
@@ -901,7 +901,7 @@
     </domain>
     <domain name="1x1_numaIA">
       <nx>1</nx> <ny>1</ny>
-      <file >$DIN_LOC_ROOT/share/domains/domain.clm/domain.lnd.1x1pt-numaIA_navy.110106.nc</file>
+      <file>$DIN_LOC_ROOT/share/domains/domain.clm/domain.lnd.1x1pt-numaIA_navy.110106.nc</file>
       <mesh>create_mesh</mesh>
       <desc>1x1 Numa Iowa -- only valid for DATM/CLM compset</desc>
     </domain>
@@ -913,45 +913,44 @@
     </domain>
     <domain name="1x1_smallvilleIA">
       <nx>1</nx> <ny>1</ny>
-      <file >$DIN_LOC_ROOT/share/domains/domain.clm/domain.lnd.1x1pt-smallvilleIA_test.110106.nc</file>
+      <file>$DIN_LOC_ROOT/share/domains/domain.clm/domain.lnd.1x1pt-smallvilleIA_test.110106.nc</file>
       <mesh>create_mesh</mesh>
       <desc>1x1 Smallville Iowa Crop Test Case -- only valid for DATM/CLM compset</desc>
     </domain>
     <domain name="1x1_camdenNJ">
       <nx>1</nx> <ny>1</ny>
-      <file >$DIN_LOC_ROOT/share/domains/domain.clm/domain.lnd.1x1pt-camdenNJ_navy.111004.nc</file>
+      <file>$DIN_LOC_ROOT/share/domains/domain.clm/domain.lnd.1x1pt-camdenNJ_navy.111004.nc</file>
       <mesh>create_mesh</mesh>
       <desc>1x1 Camden New Jersey -- only valid for DATM/CLM compset</desc>
     </domain>
     <domain name="1x1_mexicocityMEX">
       <nx>1</nx> <ny>1</ny>
-      <file >$DIN_LOC_ROOT/share/domains/domain.clm/domain.lnd.1x1pt-mexicocityMEX_navy.090715.nc</file>
+      <file>$DIN_LOC_ROOT/share/domains/domain.clm/domain.lnd.1x1pt-mexicocityMEX_navy.090715.nc</file>
       <mesh>create_mesh</mesh>
       <desc>1x1 Mexico City Mexico -- only valid for DATM/CLM compset</desc>
     </domain>
     <domain name="1x1_vancouverCAN">
       <nx>1</nx> <ny>1</ny>
-      <file >$DIN_LOC_ROOT/share/domains/domain.clm/domain.lnd.1x1pt-vancouverCAN_navy.090715.nc</file>
+      <file>$DIN_LOC_ROOT/share/domains/domain.clm/domain.lnd.1x1pt-vancouverCAN_navy.090715.nc</file>
       <mesh>create_mesh</mesh>
       <desc>1x1 Vancouver Canada -- only valid for DATM/CLM compset</desc>
     </domain>
     <domain name="1x1_urbanc_alpha">
       <nx>1</nx> <ny>1</ny>
-      <file >$DIN_LOC_ROOT/share/domains/domain.clm/domain.lnd.1x1pt-urbanc_alpha_test.110201.nc</file>
+      <file>$DIN_LOC_ROOT/share/domains/domain.clm/domain.lnd.1x1pt-urbanc_alpha_test.110201.nc</file>
       <mesh>create_mesh</mesh>
       <desc>1x1 Urban C Alpha Test Case -- only valid for DATM/CLM compset</desc>
     </domain>
+
+    <!-- ======================================================== -->
+    <!-- ATM/LND meshes regional and global -->
+    <!-- ======================================================== -->
+
     <domain name="5x5_amazon">
       <nx>5</nx> <ny>5</ny>
-      <file >$DIN_LOC_ROOT/share/domains/domain.clm/domain.lnd.5x5pt-amazon_navy.090715.nc</file>
-      <mesh>create_mesh</mesh>
+      <mesh>$DIN_LOC_ROOT/share/meshes/5x5pt-amazon_navy_ESMFmesh_cd5_c20210107.nc</mesh>
       <desc>5x5 Amazon regional case -- only valid for DATM/CLM compset</desc>
     </domain>
-
-    <!-- ======================================================== -->
-    <!-- ATM/LND meshes and regional global -->
-    <!-- ======================================================== -->
-
     <domain name="0.125nldas2">
       <nx>464</nx> <ny>224</ny>
       <mesh>$DIN_LOC_ROOT/share/meshes/0.125nldas2_ESMFmesh_cd5_241220.nc</mesh>
@@ -990,7 +989,7 @@
     </domain>
     <domain name="T341">
       <nx>1024</nx> <ny>512</ny>
-      <file >$DIN_LOC_ROOT/share/domains/domain.lnd.T341_gx1v6.111226.nc</file> <!-- TODO -->
+      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.T341_gx1v6.111226.nc</file> <!-- TODO -->
       <desc>T341 is Gaussian grid:</desc>
       <support>Backward compatible for very high resolution Spectral-dycore experiments</support>
     </domain>
@@ -1017,25 +1016,25 @@
     </domain>
     <domain name="ne5np4">
       <nx>1352</nx> <ny>1</ny>
-      <file >$DIN_LOC_ROOT/share/domains/domain.lnd.ne5np4_gx3v7.140810.nc</file> <!-- TODO -->
+      <file>$DIN_LOC_ROOT/atm/cam/coords/ne5np4_esmf_20191204.nc</file>
       <desc>ne5np4 is Spectral Elem 6-deg grid:</desc>
       <support>For ultra-low resolution spectral element grid testing</support>
     </domain>
     <domain name="ne5np4.pg2">
       <nx>1350</nx> <ny>1</ny>
-      <file >$DIN_LOC_ROOT/share/domains/domain.lnd.ne5np4.pg2_gx3v7.200311.nc</file> <!-- TODO -->
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne5pg2_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne5np4 is Spectral Elem 6-deg grid with a 2x2 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne5np4.pg3">
       <nx>1350</nx> <ny>1</ny>
-      <file >$DIN_LOC_ROOT/share/domains/domain.lnd.ne5np4.pg3_gx3v7.170605.nc</file> <!-- TODO -->
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne5pg3_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne5np4 is Spectral Elem 6-deg grid with a 3x3 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne5np4.pg4">
       <nx>1350</nx> <ny>1</ny>
-      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne5np4.pg4_gx3v7.200319.nc</file> <!-- TODO -->
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne5pg4_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne5np4 is Spectral Elem 6-deg grid with a 4x4 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
@@ -1047,84 +1046,96 @@
     </domain>
     <domain name="ne16np4.pg3">
       <nx>13824</nx> <ny>1</ny>
-      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne16pg3_gx1v7.171003.nc</file> <!-- TODO -->
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne16np4_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne16np4.pg3 is a Spectral Elem 2-deg grid with a 3x3 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne30np4">
       <nx>48602</nx> <ny>1</ny>
-      <mesh>$DIN_LOC_ROOT/share/meshes/ne30np4_091226_pentagons_ESMFmesh.nc</mesh>
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne30np4_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne30np4 is Spectral Elem 1-deg grid:</desc>
     </domain>
     <domain name="ne30np4.pg2">
       <nx>21600</nx> <ny>1</ny>
-      <mesh>$DIN_LOC_ROOT/share/meshes/ne30pg2_ESMFmesh_c20200727.nc</mesh>
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne30pg2_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne30np4.pg2 is a Spectral Elem 1-deg grid with a 2x2 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne30np4.pg3">
       <nx>48600</nx> <ny>1</ny>
-      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne30np4.pg3_gx1v7.170605.nc</file> <!-- TODO -->
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne30pg3_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne30np4.pg3 is a Spectral Elem ne30 grid with a 3x3 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne30np4.pg4">
       <nx>86400</nx> <ny>1</ny>
-      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne30np4.pg4_gx1v7.170628.nc</file> <!-- TODO -->
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne30pg4_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne30np4.pg4 is a Spectral Elem 1-deg grid with a 4x4 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne60np4">
       <nx>194402</nx> <ny>1</ny>
-      <mesh>$DIN_LOC_ROOT/share/meshes/ne60np4_pentagons_100408_ESMFmesh.nc</mesh>
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne60np4_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne60np4 is Spectral Elem 1/2-deg grid:</desc>
     </domain>
     <domain name="ne60np4.pg2">
       <nx>86400</nx> <ny>1</ny>
-      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne60np4.pg2_gx1v7.170628.nc</file> <!-- TODO -->
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne60pg2_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne60np4.pg2 is a Spectral Elem 0.5-deg grid with a 2x2 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne60np4.pg3">
       <nx>194400</nx> <ny>1</ny>
-      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne60np4.pg3_gx1v7.170628.nc</file> <!-- TODO -->
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne60pg3_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne60np4.pg3 is a Spectral Elem 0.5-deg grid with a 3x3 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne60np4.pg4">
       <nx>345600</nx> <ny>1</ny>
-      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne60np4.pg4_gx1v7.170628.nc</file> <!-- TODO -->
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne60pg4_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne60np4.pg4 is a Spectral Elem 0.5-deg grid with a 4x4 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne120np4">
       <nx>777602</nx> <ny>1</ny>
-      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne120np4_gx1v7.190718.nc</file> <!-- TODO -->
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne120np4_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne120np4 is Spectral Elem 1/4-deg grid:</desc>
     </domain>
     <domain name="ne120np4.pg2">
       <nx>345600</nx> <ny>1</ny>
-      <mesh>$DIN_LOC_ROOT/share/meshes/ne120np4_pentagons_100310_ESMFmesh.nc</mesh>
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne120pg2_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne120np4.pg2 is a Spectral Elem 0.25-deg grid with a 2x2 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne120np4.pg3">
       <nx>777600</nx> <ny>1</ny>
-      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne120np4.pg2_gx1v7.170629.nc</file> <!-- TODO -->
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne120pg3_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne120np4.pg3 is a Spectral Elem 0.25-deg grid with a 3x3 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne120np4.pg4">
       <nx>1382400</nx> <ny>1</ny>
-      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne120np4.pg3_gx1v7.190718.nc</file> <!-- TODO -->
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne120pg4_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne120np4.pg4 is a Spectral Elem 0.25-deg grid with a 4x4 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne240np4">
       <nx>3110402</nx> <ny>1</ny>
-      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne120np4.pg4_gx1v7.170629.nc</file> <!-- TODO -->
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne240np4_ESMFmesh_cdf5_c20211018.nc</mesh>
       <desc>ne240np4 is Spectral Elem 1/8-deg grid:</desc>
       <support>Experimental for very high resolution experiments</support>
+    </domain>
+    <domain name="ne240np4.pg2">
+      <nx>1382400</nx> <ny>1</ny>
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne240pg2_ESMFmesh_cdf5_c20211018.nc</mesh>
+      <desc>ne240np4.pg2 is a Spectral Elem 0.125-deg grid with a 2x2 FVM physics grid:</desc>
+      <support>EXPERIMENTAL FVM physics grid</support>
+    </domain>
+    <domain name="ne240np4.pg3">
+      <nx>3110400</nx> <ny>1</ny>
+      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne240np4.pg3_gx1v7.170629.nc</file>  <!-- TODO -->
+      <desc>ne240np4.pg3 is a Spectral Elem 0.125-deg grid with a 3x3 FVM physics grid:</desc>
+      <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne0np4TESTONLY.ne5x4">
       <nx>3863</nx> <ny>1</ny>
@@ -1186,18 +1197,6 @@
       <nx>1440</nx> <ny>721</ny>
       <mesh>$DIN_LOC_ROOT/share/meshes/TL639_200618_ESMFmesh.nc</mesh>
       <desc>TL639 grid for ERA5</desc>
-    </domain>
-    <domain name="ne240np4.pg2">
-      <nx>1382400</nx> <ny>1</ny>
-      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne240np4.pg2_gx1v7.170629.nc</file> <!-- TODO -->
-      <desc>ne240np4.pg2 is a Spectral Elem 0.125-deg grid with a 2x2 FVM physics grid:</desc>
-      <support>EXPERIMENTAL FVM physics grid</support>
-    </domain>
-    <domain name="ne240np4.pg3">
-      <nx>3110400</nx> <ny>1</ny>
-      <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne240np4.pg3_gx1v7.170629.nc</file>  <!-- TODO -->
-      <desc>ne240np4.pg3 is a Spectral Elem 0.125-deg grid with a 3x3 FVM physics grid:</desc>
-      <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
 
     <!-- fvcubed domains-->
@@ -1281,11 +1280,6 @@
       <desc>tripole v1 1-deg grid: testing proxy for high-res tripole ocean grids- do not use for scientific experiments</desc>
       <support>Experimental tripole ocean grid</support>
     </domain>
-
-    <!-- ======================================================== -->
-    <!-- ROF domains -->
-    <!-- ======================================================== -->
-
     <domain name="tn1v3">
       <nx>360</nx> <ny>291</ny>
       <file>$DIN_LOC_ROOT/share/domains/domain.ocn.tn1v3.160414.nc</file> <!-- TODO -->
@@ -1298,6 +1292,11 @@
       <desc>tn0.25v3 is NEMO ORCA1 tripole grid at 1/4 deg (reduced eORCA):</desc>
       <support>NEMO ORCA1 tripole ocean grid</support>
     </domain>
+
+    <!-- ======================================================== -->
+    <!-- ROF domains -->
+    <!-- ======================================================== -->
+
     <domain name="rx1">
       <nx>360</nx> <ny>180</ny>
       <mesh>$DIN_LOC_ROOT/share/meshes/rx1_nomask_181022_ESMFmesh.nc</mesh>
@@ -1323,14 +1322,14 @@
       <desc>HDMA is a medium resolution river routing grid for mizuRoute:</desc>
     </domain>
     <domain name="r01">
-      <!-- TODO (mvertens, 2018-12-02): create a mesh file for this -->
       <nx>3600</nx> <ny>1800</ny>
+      <mesh></mesh> <!-- TODO -->
       <desc>r01 is 1/10 degree river routing grid:</desc>
       <support>For experimental use by high resolution grids</support>
     </domain>
     <domain name="JRA025v2">
-      <!-- TODO (mvertens, 2018-12-02): create a mesh file for this -->
       <nx>1440</nx> <ny>720</ny>
+      <mesh></mesh> <!-- TODO -->
       <desc>JRA 0.25 degree runoff grid for use with JRA-55 runoff data</desc>
     </domain>
     <domain name="JRA025">

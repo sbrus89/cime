@@ -1679,33 +1679,33 @@
       <support>Test support only</support>
     </domain>
 
-    <domain name="mpasa480">
-      <nx>2562</nx> <ny>1</ny>
-    </domain>
+    <!-- <domain name="mpasa480"> -->
+    <!--   <nx>2562</nx> <ny>1</ny> -->
+    <!-- </domain> -->
 
-    <domain name="mpasa120">
-      <nx>40962</nx> <ny>1</ny>
-    </domain>
+    <!-- <domain name="mpasa120"> -->
+    <!--   <nx>40962</nx> <ny>1</ny> -->
+    <!-- </domain> -->
 
-    <domain name="mpasa60">
-      <nx>163842</nx> <ny>1</ny>
-    </domain>
+    <!-- <domain name="mpasa60"> -->
+    <!--   <nx>163842</nx> <ny>1</ny> -->
+    <!-- </domain> -->
 
-    <domain name="mpasa30">
-      <nx>655362</nx> <ny>1</ny>
-    </domain>
+    <!-- <domain name="mpasa30"> -->
+    <!--   <nx>655362</nx> <ny>1</ny> -->
+    <!-- </domain> -->
 
-    <domain name="mpasa15">
-      <nx>2621442</nx> <ny>1</ny>
-    </domain>
+    <!-- <domain name="mpasa15"> -->
+    <!--   <nx>2621442</nx> <ny>1</ny> -->
+    <!-- </domain> -->
 
-    <domain name="mpasa12">
-      <nx>4096002</nx> <ny>1</ny>
-    </domain>
+    <!-- <domain name="mpasa12"> -->
+    <!--   <nx>4096002</nx> <ny>1</ny> -->
+    <!-- </domain> -->
 
-    <domain name="mpasa15-3">
-      <nx>6488066</nx> <ny>1</ny>
-    </domain>
+    <!-- <domain name="mpasa15-3"> -->
+    <!--   <nx>6488066</nx> <ny>1</ny> -->
+    <!-- </domain> -->
 
     <domain name="TL319">
       <nx>640</nx> <ny>320</ny>
@@ -1986,7 +1986,7 @@
 
   </required_gridmaps>
 
-  <gridmaps driver="mct">
+  <gridmaps>
 
     <!-- ======================================================== -->
     <!--- atm to ocean and ocean to atm mapping files -->
