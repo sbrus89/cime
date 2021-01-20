@@ -1011,6 +1011,8 @@
     </domain>
     <domain name="T42">
       <nx>128</nx> <ny>64</ny>
+      <file grid="atm|lnd">$DIN_LOC_ROOT/share/domains/domain.lnd.T42_gx1v7.180727.nc</file>
+      <file grid="ocnice" >$DIN_LOC_ROOT/share/domains/domain.ocn.T42_gx1v7.180727.nc</file>
       <mesh>$DIN_LOC_ROOT/share/meshes/T42_ESMFmesh_c20200629.nc</mesh>
       <desc>T42 is Gaussian grid:</desc>
     </domain>
@@ -1046,8 +1048,8 @@
     </domain>
     <domain name="ne16np4.pg3">
       <nx>13824</nx> <ny>1</ny>
-      <mesh>$DIN_LOC_ROOT/share/meshes/ne16np4_ESMFmesh_cdf5_c20211018.nc</mesh>
-      <desc>ne16np4.pg3 is a Spectral Elem 2-deg grid with a 3x3 FVM physics grid:</desc>
+      <mesh>$DIN_LOC_ROOT/share/meshes/ne16pg3_ESMFmesh_cdf5_c20211018.nc</mesh>
+      <desc>ne16pg3 is a Spectral Elem 2-deg grid with a 3x3 FVM physics grid:</desc>
       <support>EXPERIMENTAL FVM physics grid</support>
     </domain>
     <domain name="ne30np4">
