@@ -115,6 +115,7 @@
       <value component="mali"     >$SRCROOT/components/mpas-albany-landice/cime_config/config_compsets.xml</value>
       <value component="mpassi"   >$SRCROOT/components/mpas-seaice/cime_config/config_compsets.xml</value>
       <value component="mosart"   >$SRCROOT/components/mosart/cime_config/config_compsets.xml</value>
+      <value component="ww3"      >$SRCROOT/components/ww3/cime_config/config_compsets.xml</value>
     </values>
     <group>case_last</group>
     <file>env_case.xml</file>
@@ -134,6 +135,7 @@
       <value component="mpaso"    >$SRCROOT/cime_config/allactive/config_pesall.xml</value>
       <value component="mali"     >$SRCROOT/cime_config/allactive/config_pesall.xml</value>
       <value component="mpassi"   >$SRCROOT/cime_config/allactive/config_pesall.xml</value>
+      <value component="ww3"      >$SRCROOT/cime_config/allactive/config_pesall.xml</value>
     </values>
     <group>case_last</group>
     <file>env_case.xml</file>
@@ -386,6 +388,7 @@
     <type>char</type>
     <default_value>unset</default_value>
     <values>
+      <value component="ww3" >$SRCROOT/components/ww3/cime_config/config_component.xml</value>
       <value component="dwav">$CIMEROOT/src/components/data_comps_$COMP_INTERFACE/dwav/cime_config/config_component.xml</value>
       <value component="swav">$CIMEROOT/src/components/stub_comps_$COMP_INTERFACE/swav/cime_config/config_component.xml</value>
       <value component="xwav">$CIMEROOT/src/components/xcpl_comps_$COMP_INTERFACE/xwav/cime_config/config_component.xml</value>
