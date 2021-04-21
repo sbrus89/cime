@@ -563,6 +563,8 @@ class Case(object):
         elif "GLC" in progcomps and progcomps["GLC"]:
             # This is a "TG" compset
             primary_component = spec["GLC"]
+        elif progcomps["WAV"]:
+            primary_component = spec["WAV"]
         else:
             # This is "A", "X" or "S"
             primary_component = "drv"
